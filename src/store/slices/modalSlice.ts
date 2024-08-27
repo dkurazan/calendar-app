@@ -14,6 +14,7 @@ export const modalSlice = createSlice({
     reducers: {
         openModal: (state, action: PayloadAction<DateInfo>) => {
             return {
+                ...state,
                 pickedDate: action.payload.dateStr,
                 open: true,
                 position: {
