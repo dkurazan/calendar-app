@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url('/fonts/SourceSansPro-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src: url('/fonts/SourceSansPro-Bold.ttf');
+  font-weight: 700;
+}
+
+:root {
+  --fc-border-color: #EAF0F4;
+
+  --fc-button-text-color: #4D4F5C;
+  --fc-button-bg-color: #FFFFFF;
+  --fc-button-border-color: #D7DAE2;
+  --fc-button-hover-bg-color: #EBEBF2;
+  --fc-button-hover-border-color: #D7DAE2;
+  --fc-button-active-bg-color: #FFFFFF;
+  --fc-button-active-text-color: #3B86FF;
+  --fc-button-active-border-color: #151e27;
+
+  --fc-today-bg-color: #F5F6FA;
+}
+
+.fc-button {
+  text-transform: capitalize !important;
+}
+
+.fc-button-active {
+  color: #3B86FF !important;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus,
+.fc .fc-button-primary:focus {
+  box-shadow: none !important;
+}
+
+.fc .fc-button-primary:not(:disabled):active, .fc .fc-button-primary:not(:disabled).fc-button-active {
+  border-color: #D7DAE2;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 18px;
+  color: #4D4F5C;
+}
+
+.fc-col-header-cell {
+  padding: 15px 0 !important;
+  text-transform: capitalize;
+  font-size: 11px;
+  color: #A3A6B4;
+  background-color: #F5F6FA;
+  border-right-color: #F5F6FA !important;
+}
+
+.fc-dayGridMonth-view .fc-col-header-cell {
+  text-transform: uppercase;
+}
+
+.fc .fc-timegrid-slot-label-cushion {
+  color: #4D4F5C !important;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.fc .fc-timegrid-axis-cushion {
+  color: #4D4F5C !important;
+  font-size: 13px;
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-end {
+  background-color: #3B86FF;
+  border-radius: 4px;
+  color: white;
+  padding: 7px 0 7px 14px;
+}
+
+.fc-event-time {
+  display: none;
+}
+
+.fc-event-title {
+  font-weight: 400 !important;
+}
+
+.pageHeight {
+  min-height: calc(100vh - 74px);
+}
+
+input[type="date"]::-webkit-datetime-edit,
+input[type="time"]::-webkit-datetime-edit {
+  /* display: none; */
+  color: #D6D6D6;
+  font-size: 9px;
+}
+
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  align-self: flex-end;
+}
